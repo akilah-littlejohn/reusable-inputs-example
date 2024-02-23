@@ -1,0 +1,76 @@
+<h3>Enter your details below</h3>
+
+
+
+  <app-r label="imperial" value= "imperial" (change)=" selectedUnit = 'imperial' "></app-r>
+
+  <app-r label="metric" value="metric" (change)=" selectedUnit= 'metric' " ></app-r>
+
+
+  <form [formGroup]="metricFormGroup">
+
+    <fieldset>
+  
+      <app-i [control]="metricFormGroup.controls.cm" name="cm" label="Height" min="0" max="300" unit="cm"></app-i>
+  
+      <app-i [control]="metricFormGroup.controls.kg" name="kg" label="Weight" min="0" max="2" unit="kg" ></app-i>
+  
+    </fieldset>
+  
+  </form>
+<!--@if('imperial' === selectedUnit) {
+  
+<form [formGroup]="metricFormGroup">
+
+  <fieldset>
+
+    <app-i [control]="metricFormGroup.controls.cm" name="cm" label="Height" min="0" max="300" unit="cm"></app-i>
+
+    <app-i [control]="metricFormGroup.controls.kg" name="kg" label="Weight" min="0" max="2" unit="kg" ></app-i>
+
+  </fieldset>
+
+</form>
+} @else {
+
+<form [formGroup]="imperialFormGroup">
+
+  <fieldset>
+    <app-i
+      [control]="imperialFormGroup.controls.ft"
+      name="ft"
+      min="0"
+      max="2"
+      unit="ft"
+    ></app-i>
+
+    <app-i
+      [control]= "imperialFormGroup.controls.in"
+      name="in"
+      min="0"
+      max="11"
+      unit="in"
+    ></app-i>
+
+    <app-i
+      [control]= "imperialFormGroup.controls.st"
+      name="st"
+      label="Weight"
+      min="0"
+      max="43"
+      unit="st"
+    ></app-i>
+
+    <app-i
+      [control]= "imperialFormGroup.controls.lbs"
+      name="lbs"
+      min="0"
+      max="605"
+      unit="lbs"
+    ></app-i>
+
+  </fieldset>
+
+</form>
+} 
+-->
